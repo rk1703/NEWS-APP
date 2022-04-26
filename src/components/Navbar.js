@@ -34,8 +34,23 @@ const Navbar = (props) => {
                 </Link>
               </li>
               <li className="nav-item">
+                <Link className={`nav-link ${location.pathname === "/beauty" ? "active" : ""}`} to="/beauty">
+                  Beauty
+                </Link>
+              </li>
+              <li className="nav-item">
                 <Link className={`nav-link ${location.pathname === "/business" ? "active" : ""}`} to="/business">
                   Business
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className={`nav-link ${location.pathname === "/economics" ? "active" : ""}`} to="/economics">
+                  Economics
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className={`nav-link ${location.pathname === "/energy" ? "active" : ""}`} to="/energy">
+                  Energy
                 </Link>
               </li>
               <li className="nav-item">
@@ -44,8 +59,33 @@ const Navbar = (props) => {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className={`nav-link ${location.pathname === "/health" ? "active" : ""}`} to="/health">
-                  Health
+                <Link className={`nav-link ${location.pathname === "/finance" ? "active" : ""}`} to="/finance">
+                  Finance
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className={`nav-link ${location.pathname === "/food" ? "active" : ""}`} to="/food">
+                  Food
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className={`nav-link ${location.pathname === "/gaming" ? "active" : ""}`} to="/gaming">
+                  Gaming
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className={`nav-link ${location.pathname === "/music" ? "active" : ""}`} to="/music">
+                  Music
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className={`nav-link ${location.pathname === "/news" ? "active" : ""}`} to="/news">
+                  News
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className={`nav-link ${location.pathname === "/politics" ? "active" : ""}`} to="/politics">
+                  Politics
                 </Link>
               </li>
               <li className="nav-item">
@@ -54,13 +94,23 @@ const Navbar = (props) => {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className={`nav-link ${location.pathname === "/sports" ? "active" : ""}`} to="/sports">
+                <Link className={`nav-link ${location.pathname === "/sports" ? "active" : ""}`} to="/sport">
                   Sports
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className={`nav-link ${location.pathname === "/technology" ? "active" : ""}`} to="/technology">
+                <Link className={`nav-link ${location.pathname === "/travel" ? "active" : ""}`} to="/travel">
+                  Travel
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className={`nav-link ${location.pathname === "/technology" ? "active" : ""}`} to="/tech">
                   Technology
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className={`nav-link ${location.pathname === "/world" ? "active" : ""}`} to="/world">
+                 World
                 </Link>
               </li>
             </ul>
