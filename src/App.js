@@ -39,8 +39,19 @@ const App = () => {
               setProgress={setProgress}
               mode={mode}
               apiKey={apiKey}
-              key="general"
-              category="general"
+              key="news"
+              topic="news"
+              pageSize={pageSize}
+            />{" "}
+          </Route>
+          <Route exact path="/beauty">
+            {" "}
+            <News
+              setProgress={setProgress}
+              mode={mode}
+              apiKey={apiKey}
+              key="beauty"
+              topic="beauty"
               pageSize={pageSize}
             />{" "}
           </Route>
@@ -51,7 +62,29 @@ const App = () => {
               mode={mode}
               apiKey={apiKey}
               key="business"
-              category="business"
+              topic="business"
+              pageSize={pageSize}
+            />{" "}
+          </Route>
+          <Route exact path="/economics">
+            {" "}
+            <News
+              setProgress={setProgress}
+              mode={mode}
+              apiKey={apiKey}
+              key="economics"
+              topic="economics"
+              pageSize={pageSize}
+            />{" "}
+          </Route>
+          <Route exact path="/energy">
+            {" "}
+            <News
+              setProgress={setProgress}
+              mode={mode}
+              apiKey={apiKey}
+              key="energy"
+              topic="energy"
               pageSize={pageSize}
             />{" "}
           </Route>
@@ -62,18 +95,62 @@ const App = () => {
               mode={mode}
               apiKey={apiKey}
               key="entertainment"
-              category="entertainment"
+              topic="entertainment"
               pageSize={pageSize}
             />{" "}
           </Route>
-          <Route exact path="/health">
+          <Route exact path="/finance">
             {" "}
             <News
               setProgress={setProgress}
               mode={mode}
               apiKey={apiKey}
-              key="health"
-              category="health"
+              key="finance"
+              topic="finance"
+              pageSize={pageSize}
+            />{" "}
+          </Route>
+          <Route exact path="/food">
+            {" "}
+            <News
+              setProgress={setProgress}
+              mode={mode}
+              apiKey={apiKey}
+              key="food"
+              topic="food"
+              pageSize={pageSize}
+            />{" "}
+          </Route>
+          <Route exact path="/gaming">
+            {" "}
+            <News
+              setProgress={setProgress}
+              mode={mode}
+              apiKey={apiKey}
+              key="gaming"
+              topic="gaming"
+              pageSize={pageSize}
+            />{" "}
+          </Route>
+          <Route exact path="/music">
+            {" "}
+            <News
+              setProgress={setProgress}
+              mode={mode}
+              apiKey={apiKey}
+              key="music"
+              topic="music"
+              pageSize={pageSize}
+            />{" "}
+          </Route>
+          <Route exact path="/politics">
+            {" "}
+            <News
+              setProgress={setProgress}
+              mode={mode}
+              apiKey={apiKey}
+              key="politics"
+              topic="politics"
               pageSize={pageSize}
             />{" "}
           </Route>
@@ -84,29 +161,51 @@ const App = () => {
               mode={mode}
               apiKey={apiKey}
               key="science"
-              category="science"
+              topic="science"
               pageSize={pageSize}
             />{" "}
           </Route>
-          <Route exact path="/sports">
+          <Route exact path="/sport">
             {" "}
             <News
               setProgress={setProgress}
               mode={mode}
               apiKey={apiKey}
-              key="sports"
-              category="sports"
+              key="sport"
+              topic="sport"
               pageSize={pageSize}
             />{" "}
           </Route>
-          <Route exact path="/technology">
+          <Route exact path="/tech">
             {" "}
             <News
               setProgress={setProgress}
               mode={mode}
               apiKey={apiKey}
-              key="technology"
-              category="technology"
+              key="tech"
+              topic="tech"
+              pageSize={pageSize}
+            />{" "}
+          </Route>
+          <Route exact path="/travel">
+            {" "}
+            <News
+              setProgress={setProgress}
+              mode={mode}
+              apiKey={apiKey}
+              key="travel"
+              topic="travel"
+              pageSize={pageSize}
+            />{" "}
+          </Route>
+          <Route exact path="/world">
+            {" "}
+            <News
+              setProgress={setProgress}
+              mode={mode}
+              apiKey={apiKey}
+              key="world"
+              topic="world"
               pageSize={pageSize}
             />{" "}
           </Route>

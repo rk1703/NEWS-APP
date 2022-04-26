@@ -99,13 +99,13 @@ const Navbar = (props) => {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className={`nav-link ${location.pathname === "/travel" ? "active" : ""}`} to="/travel">
-                  Travel
+                <Link className={`nav-link ${location.pathname === "/technology" ? "active" : ""}`} to="/tech">
+                  Technology
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className={`nav-link ${location.pathname === "/technology" ? "active" : ""}`} to="/tech">
-                  Technology
+                <Link className={`nav-link ${location.pathname === "/travel" ? "active" : ""}`} to="/travel">
+                  Travel
                 </Link>
               </li>
               <li className="nav-item">

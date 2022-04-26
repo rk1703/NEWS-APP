@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Newsitems from "./Newsitems";
-import Spinner from "./Spinner";
+// import Spinner from "./Spinner";
 import PropTypes from "prop-types";
-import InfiniteScroll from "react-infinite-scroll-component";
+// import InfiniteScroll from "react-infinite-scroll-component";
 
 
 const News = (props) => {
@@ -17,7 +17,7 @@ const News = (props) => {
   const [loading, setLoading] = useState(false);
   // eslint-disable-next-line 
   const [page, setPage] = useState(1);
-  const [totalResults, setTotalResults] = useState(0);
+  // const [totalResults, setTotalResults] = useState(0);
   const webUrl = `https://api.newscatcherapi.com/v2/`;
 
   // dad=props.mode;
@@ -30,7 +30,7 @@ const News = (props) => {
   const updateNews = async () => {
     props.setProgress(10);
     setLoading(true);
-    let url = `${webUrl}latest_headlines?countries=IN&lang=en&topic=sport&page_size=2`;
+    let url = `${webUrl}latest_headlines?countries=IN&lang=en&topic=${props.topic}&page_size=100`;
     let data = await fetch(url,{
       method:'GET',
       mode:'cors',
@@ -129,8 +129,8 @@ News.propTypes = {
 
 News.defaultProps = {
   pageSize: 6,
-  country: "in",
-  category: "general",
+  country: "IN",
+  category: "news",
 };
 
 export default News;
