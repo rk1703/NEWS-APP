@@ -87,7 +87,7 @@ const News = (props) => {
             }`}
             style={{ marginTop: "65px" }}
           >
-            NEWS-APP: Top {capitalizeFirstLetter(props.category)} News-Headlines{" "}
+            NEWS-APP: Top {capitalizeFirstLetter(props.topic)} News-Headlines{" "}
           </h2>
         </div>
         
@@ -124,13 +124,13 @@ const News = (props) => {
 News.propTypes = {
   pageSize: PropTypes.number,
   country: PropTypes.string,
-  category: PropTypes.string,
+  topic: PropTypes.string,
 };
 
 News.defaultProps = {
   pageSize: 6,
   country: "IN",
-  category: "news",
+  topic: "news",
 };
 
 export default News;

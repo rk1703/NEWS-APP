@@ -12,9 +12,12 @@ const Navbar = (props) => {
         className={`navbar fixed-top navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}
       >
         <div className="container-fluid">
-          <Link className="navbar-brand" to="/">
-            Nesw-APP
+          <div>
+          <Link className="navbar-brand" to="/NEWS-APP">
+            News-APP
           </Link>
+          </div>
+
           <button
             className="navbar-toggler"
             type="button"
@@ -26,10 +29,11 @@ const Navbar = (props) => {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
+          <div>                    
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link  className={`nav-link ${location.pathname === "/" ? "active" : ""}`} aria-current="page" to="/">
+                <Link  className={`nav-link ${location.pathname === "/" ? "active" : ""}`} aria-current="page" to="/NEWS-APP">
                   Home
                 </Link>
               </li>
@@ -132,6 +136,7 @@ const Navbar = (props) => {
                 {props.btnText}
               </label>
             </div>
+          </div>
           </div>
         </div>
       </nav>

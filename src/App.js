@@ -33,7 +33,7 @@ const App = () => {
         <LoadingBar height={3} color="#f11946" progress={progress} />
 
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/NEWS-APP">
             {" "}
             <News
               setProgress={setProgress}
