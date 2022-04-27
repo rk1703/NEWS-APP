@@ -33,6 +33,17 @@ const App = () => {
         <LoadingBar height={3} color="#f11946" progress={progress} />
 
         <Switch>
+          <Route exact path="/">
+            {" "}
+            <News
+              setProgress={setProgress}
+              mode={mode}
+              apiKey={apiKey}
+              key="news"
+              topic="news"
+              pageSize={pageSize}
+            />{" "}
+          </Route>
           <Route exact path="/NEWS-APP">
             {" "}
             <News

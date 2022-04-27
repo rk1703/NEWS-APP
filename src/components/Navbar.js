@@ -11,12 +11,31 @@ const Navbar = (props) => {
       <nav
         className={`navbar fixed-top navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}
       >
-        <div className="container-fluid">
-          <div>
+        <div className="container-fluid flex-column " >
+          <div className="d-flex justify-content-between" style={{width:'100%'}}>
           <Link className="navbar-brand" to="/NEWS-APP">
             News-APP
           </Link>
-          </div>
+          <div className="d-flex align-items-center ">
+
+          <div
+              className={`form-check form-switch mx-1 text-${
+                props.mode === "light" ? "Dark" : "light"
+              }`}
+            >
+              <input
+                className="form-check-input"
+                onClick={props.togglemode}
+                type="checkbox"
+                id="flexSwitchCheckDefault"
+                />
+              <label
+                className="form-check-label"
+                htmlFor="flexSwitchCheckDefault"
+              >
+                {props.btnText}
+              </label>
+            </div>
 
           <button
             className="navbar-toggler"
@@ -26,17 +45,14 @@ const Navbar = (props) => {
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation"
-          >
+            >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div>                    
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <Link  className={`nav-link ${location.pathname === "/" ? "active" : ""}`} aria-current="page" to="/NEWS-APP">
-                  Home
-                </Link>
-              </li>
+            </div>
+            </div>
+                       
+          <div className="collapse navbar-collapse overflow-hidden" style={{width:'90%'}} id="navbarSupportedContent ">
+            <ul className="navbar-nav mb-2 mb-lg-0 ">
               <li className="nav-item">
                 <Link className={`nav-link ${location.pathname === "/beauty" ? "active" : ""}`} to="/beauty">
                   Beauty
@@ -83,11 +99,6 @@ const Navbar = (props) => {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className={`nav-link ${location.pathname === "/news" ? "active" : ""}`} to="/news">
-                  News
-                </Link>
-              </li>
-              <li className="nav-item">
                 <Link className={`nav-link ${location.pathname === "/politics" ? "active" : ""}`} to="/politics">
                   Politics
                 </Link>
@@ -118,26 +129,8 @@ const Navbar = (props) => {
                 </Link>
               </li>
             </ul>
-            <div
-              className={`form-check form-switch text-${
-                props.mode === "light" ? "Dark" : "light"
-              }`}
-            >
-              <input
-                className="form-check-input"
-                onClick={props.togglemode}
-                type="checkbox"
-                id="flexSwitchCheckDefault"
-              />
-              <label
-                className="form-check-label"
-                htmlFor="flexSwitchCheckDefault"
-              >
-                {props.btnText}
-              </label>
-            </div>
           </div>
-          </div>
+    
         </div>
       </nav>
     </>

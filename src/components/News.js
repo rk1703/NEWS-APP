@@ -30,7 +30,7 @@ const News = (props) => {
   const updateNews = async () => {
     props.setProgress(10);
     setLoading(true);
-    let url = `${webUrl}latest_headlines?countries=IN&lang=en&topic=${props.topic}&page_size=100`;
+    let url = `${webUrl}latest_headlines?countries=IN&lang=en&topic=${props.topic}&page_size=3`;
     let data = await fetch(url,{
       method:'GET',
       mode:'cors',
@@ -80,7 +80,7 @@ const News = (props) => {
   return (
     <>
       <div className="container my-3 mx-auto">
-        <div className="my-10">
+        <div className="mt-4 pt-3">
           <h2
             className={`text-center text-${
               props.mode === "light" ? "Dark" : "light"
