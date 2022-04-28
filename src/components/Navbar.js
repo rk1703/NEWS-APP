@@ -51,13 +51,13 @@ const Navbar = (props) => {
             </div>
             </div>
                        
-          <div className="collapse navbar-collapse overflow-hidden" style={{width:'95%'}} id="navbarSupportedContent">
+          <div className="collapse navbar-collapse overflow-hidden justify-content-center" style={{width:'95%'}} id="navbarSupportedContent">
             <ul className="navbar-nav mb-2 mb-lg-0  ">
-              {/* <li className="nav-item">
+              <li className="nav-item">
                 <Link className={`nav-link ${location.pathname === "/beauty" ? "active" : ""}`} to="/beauty">
                   Beauty
                 </Link>
-              </li> */}
+              </li>
               <li className="nav-item">
                 <Link className={`nav-link ${location.pathname === "/business" ? "active" : ""}`} to="/business">
                   Business
@@ -118,11 +118,11 @@ const Navbar = (props) => {
                   Technology
                 </Link>
               </li>
-              {/* <li className="nav-item">
+              <li className="nav-item">
                 <Link className={`nav-link ${location.pathname === "/travel" ? "active" : ""}`} to="/travel">
                   Travel
                 </Link>
-              </li> */}
+              </li>
               <li className="nav-item">
                 <Link className={`nav-link ${location.pathname === "/world" ? "active" : ""}`} to="/world">
                  World
