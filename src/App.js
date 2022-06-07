@@ -44,7 +44,7 @@ const App = () => {
               pageSize={pageSize}
             />{" "}
           </Route>
-          <Route exact path="/NEWS-APP">
+          <Route exact path="/NEWS-APP/">
             {" "}
             <News
               setProgress={setProgress}
