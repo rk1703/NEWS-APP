@@ -10,7 +10,7 @@ const News = (props) => {
   // const style = { '@media (max-width: 500px)': {
     
   // },};
-  console.log("news is load");
+  // console.log("news is load");
 
   const [articles, setArticles] = useState([]);
   // eslint-disable-next-line 
@@ -36,19 +36,19 @@ const News = (props) => {
       mode:'cors',
       headers:{
         'Content-Type':'application/json',
-        'x-api-key':'izoWEOsWKAck2UgttmTP9zI1fgfGk2E2D2p8zx56VLU',
+        'x-api-key':'s6dT4jcB49s4l4GMZ_Ftj2KmBSaLrH4jZrJWBJbv8Rg',
       }
     });
     props.setProgress(30);
     let parseData = await data.json();
     props.setProgress(50);
-    console.log(parseData);
-    console.log("new",props.apiKey);
-    console.log(process.env.NEWSCATCHER_NEWS_API);
+    console.log("updated",parseData);
+    // console.log("new",props.apiKey);
+    // console.log(process.env.NEWSCATCHER_NEWS_API);
     // (parseData);
     // ("cdm", page);
     setArticles(parseData.articles);
-    console.log("articles",articles)
+    console.log("articles ravi",articles)
     setTotalResults(parseData.total_hits);
     setLoading(false);
     props.setProgress(100);
@@ -68,15 +68,22 @@ const News = (props) => {
       mode:'cors',
       headers:{
         'Content-Type':'application/json',
-        'x-api-key':'izoWEOsWKAck2UgttmTP9zI1fgfGk2E2D2p8zx56VLU',
+        'x-api-key':'s6dT4jcB49s4l4GMZ_Ftj2KmBSaLrH4jZrJWBJbv8Rg',
       }
     });
     let parseData = await data.json();
     // (parseData);
     // ("cdm", page);
-    console.log(parseData)
+    console.log("more",parseData)
+    
+    
     setArticles(articles.concat(parseData.articles));
-    setTotalResults(parseData.totalResults);
+    let uniqueArticles = [...new Set(articles)];
+    setArticles(uniqueArticles);
+    console.log("unique",uniqueArticles)
+    console.log("more",articles)
+
+    setTotalResults(parseData.total_hits);
     setLoading(false);
   };
 
