@@ -36,19 +36,19 @@ const News = (props) => {
       mode:'cors',
       headers:{
         'Content-Type':'application/json',
-        'x-api-key':'s6dT4jcB49s4l4GMZ_Ftj2KmBSaLrH4jZrJWBJbv8Rg',
+        'x-api-key':'X7468xb1S22H4l-H03lWZmzzmBuLt2VRbk2-l5Q6kGQ',
       }
     });
     props.setProgress(30);
     let parseData = await data.json();
     props.setProgress(50);
-    console.log("updated",parseData);
+    // console.log("updated",parseData);
     // console.log("new",props.apiKey);
     // console.log(process.env.NEWSCATCHER_NEWS_API);
     // (parseData);
     // ("cdm", page);
     setArticles(parseData.articles);
-    console.log("articles ravi",articles)
+    // console.log("articles ravi",articles)
     setTotalResults(parseData.total_hits);
     setLoading(false);
     props.setProgress(100);
@@ -62,29 +62,30 @@ const News = (props) => {
   const fetchMoreData = async () => {
     setLoading(true);
     let url = `${webUrl}latest_headlines?countries=IN&lang=en&topic=${props.topic}&page_size=${props.pageSize}&page=${page + 1}`;
-    setPage(page + 1);
     let data = await fetch(url,{
       method:'GET',
       mode:'cors',
       headers:{
         'Content-Type':'application/json',
-        'x-api-key':'s6dT4jcB49s4l4GMZ_Ftj2KmBSaLrH4jZrJWBJbv8Rg',
+        'x-api-key':'X7468xb1S22H4l-H03lWZmzzmBuLt2VRbk2-l5Q6kGQ',
       }
     });
     let parseData = await data.json();
     // (parseData);
     // ("cdm", page);
-    console.log("more",parseData)
+    // console.log("more",parseData)
     
     
     setArticles(articles.concat(parseData.articles));
-    let uniqueArticles = [...new Set(articles)];
-    setArticles(uniqueArticles);
-    console.log("unique",uniqueArticles)
-    console.log("more",articles)
-
+    // let uniqueArticles = [...new Set(articles)];
+    // setArticles(uniqueArticles);
+    // console.log("unique",uniqueArticles)
+    // console.log("more",articles)
+    
     setTotalResults(parseData.total_hits);
     setLoading(false);
+    console.log("page",page)
+    setPage(page + 1);
   };
 
   return (
