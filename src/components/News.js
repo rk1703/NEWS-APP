@@ -4,24 +4,14 @@ import Spinner from "./Spinner";
 import PropTypes from "prop-types";
 import InfiniteScroll from "react-infinite-scroll-component";
 
-
 const News = (props) => {
-
-  // const style = { '@media (max-width: 500px)': {
-    
-  // },};
-  // console.log("news is load");
-
   const [articles, setArticles] = useState([]);
-  // eslint-disable-next-line 
+  // eslint-disable-next-line
   const [loading, setLoading] = useState(false);
-  // eslint-disable-next-line 
+  // eslint-disable-next-line
   const [page, setPage] = useState(1);
   const [totalResults, setTotalResults] = useState(0);
   const webUrl = `https://api.newscatcherapi.com/v2/`;
-
-  // dad=props.mode;
-  // (loading);
 
   const capitalizeFirstLetter = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -31,24 +21,18 @@ const News = (props) => {
     props.setProgress(10);
     setLoading(true);
     let url = `${webUrl}latest_headlines?countries=IN&lang=en&topic=${props.topic}&page_size=${props.pageSize}&page=${page}`;
-    let data = await fetch(url,{
-      method:'GET',
-      mode:'cors',
-      headers:{
-        'Content-Type':'application/json',
-        'x-api-key':'X7468xb1S22H4l-H03lWZmzzmBuLt2VRbk2-l5Q6kGQ',
-      }
+    let data = await fetch(url, {
+      method: "GET",
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+        "x-api-key": process.env.REACT_APP_API_KEY,
+      },
     });
     props.setProgress(30);
     let parseData = await data.json();
     props.setProgress(50);
-    // console.log("updated",parseData);
-    // console.log("new",props.apiKey);
-    // console.log(process.env.NEWSCATCHER_NEWS_API);
-    // (parseData);
-    // ("cdm", page);
     setArticles(parseData.articles);
-    // console.log("articles ravi",articles)
     setTotalResults(parseData.total_hits);
     setLoading(false);
     props.setProgress(100);
@@ -61,30 +45,24 @@ const News = (props) => {
 
   const fetchMoreData = async () => {
     setLoading(true);
-    let url = `${webUrl}latest_headlines?countries=IN&lang=en&topic=${props.topic}&page_size=${props.pageSize}&page=${page + 1}`;
-    let data = await fetch(url,{
-      method:'GET',
-      mode:'cors',
-      headers:{
-        'Content-Type':'application/json',
-        'x-api-key':'X7468xb1S22H4l-H03lWZmzzmBuLt2VRbk2-l5Q6kGQ',
-      }
+    let url = `${webUrl}latest_headlines?countries=IN&lang=en&topic=${
+      props.topic
+    }&page_size=${props.pageSize}&page=${page + 1}`;
+    let data = await fetch(url, {
+      method: "GET",
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+        "x-api-key": "pKQWiInJT_gGYj6nd6hprAcyq2CMxcSHQJ8SFTgr3GM",
+      },
     });
     let parseData = await data.json();
-    // (parseData);
-    // ("cdm", page);
-    // console.log("more",parseData)
-    
-    
+
     setArticles(articles.concat(parseData.articles));
-    // let uniqueArticles = [...new Set(articles)];
-    // setArticles(uniqueArticles);
-    // console.log("unique",uniqueArticles)
-    // console.log("more",articles)
-    
+
     setTotalResults(parseData.total_hits);
     setLoading(false);
-    console.log("page",page)
+    console.log("page", page);
     setPage(page + 1);
   };
 
@@ -101,7 +79,7 @@ const News = (props) => {
             NEWS-APP: Top {capitalizeFirstLetter(props.topic)} News-Headlines{" "}
           </h2>
         </div>
-          
+
         <InfiniteScroll
           dataLength={articles.length}
           next={fetchMoreData}
@@ -109,10 +87,10 @@ const News = (props) => {
           loader={<Spinner mode={props.mode} />}
           className="p-0 overflow-hidden"
         >
-          <div className="row container "style={{width :"fit-content"}}>
+          <div className="row container " style={{ width: "fit-content" }}>
             {articles.map((element) => {
               return (
-                <div className="col-lg-4 col-md-6"  key={element._id}>
+                <div className="col-lg-4 col-md-6" key={element._id}>
                   <Newsitems
                     mode={props.mode}
                     title={element.title}

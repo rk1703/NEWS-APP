@@ -7,10 +7,9 @@ import LoadingBar from "react-top-loading-bar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 const App = () => {
-  const pageSize=9;
-  const apiKey = 'izoWEOsWKAck2UgttmTP9zI1fgfGk2E2D2p8zx56VLU';
-  // const apiKey = process.env.NEWSCATCHER_NEWS_API;
-  // const apiKey = process.env.NEWSCATCHER_NEWS_API;
+  const pageSize = 9;
+  // const apiKey = "pKQWiInJT_gGYj6nd6hprAcyq2CMxcSHQJ8SFTgr3GM";
+  const apiKey = process.env.REACT_APP_API_KEY;
   const [progress, setProgress] = useState(0);
   const [mode, setMode] = useState("light");
   const [btnText, setBtnText] = useState("Enable DarkMode");
