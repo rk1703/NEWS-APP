@@ -1,0 +1,54 @@
+{
+    "status": "ok",
+    "total_hits": 707,
+    "page": 1,
+    "total_pages": 707,
+    "page_size": 1,
+    "articles": [
+      {
+        "title": "IPL 2022, Match 35: Gujarat Titans Beat Kolkata Knight Riders By 8 Runs",
+        "author": null,
+        "published_date": "2022-04-24 03:14:09",
+        "published_date_precision": "full",
+        "link": "https://www.outlookindia.com/sports/ipl-2022-match-35-gujarat-titans-beat-kolkata-knight-riders-by-8-runs-in-pics-photos-192887",
+        "clean_url": "outlookindia.com",
+        "excerpt": "Gujarat Titans edged past Kolkata Knight Riders by 8 runs at Mumbai's DY Patil Stadium on Saturday. It was Hardik Pandya's 67 off 49 that propelled GT to 156/9 before a team bowling effort could help…",
+        "summary": "Gujarat Titans edged past Kolkata Knight Riders by 8 runs at Mumbai's DY Patil Stadium on Saturday. It was Hardik Pandya's 67 off 49 that propelled GT to 156/9 before a team bowling effort could help them win the game despite Andre Russell's scare (48 off 25). 111 IPL 2022 Match 35 - KKR vs GT | PTI Photo/ Sportzpics for IPL Rashid Khan of Gujarat Titans bowls during T20 cricket match 35 of the Indian Premier League 2022 (IPL season 15) between the Kolkata Knight Riders and the Gujarat Titans, at the DY Patil Stadium in Mumbai.",
+        "rights": "outlookindia.com",
+        "rank": 3864,
+        "topic": "news",
+        "country": "IN",
+        "language": "en",
+        "authors": [],
+        "media": "https://imgnew.outlookindia.com/uploadimage/library/16_9/16_9_5/IMAGE_1650766522.webp?utm_source=fb",
+        "is_opinion": false,
+        "twitter_account": "@outlookindia",
+        "_score": 13.668033,
+        "_id": "47285f563089c45e25c465974720cdb6"
+      }
+    ],
+    "user_input": {
+      "q": "ipl",
+      "search_in": [
+        "title_summary"
+      ],
+      "lang": null,
+      "not_lang": null,
+      "countries": [
+        "IN"
+      ],
+      "not_countries": null,
+      "from": "2022-04-24 00:00:00",
+      "to": null,
+      "ranked_only": "True",
+      "from_rank": null,
+      "to_rank": null,
+      "sort_by": "relevancy",
+      "page": 1,
+      "size": 1,
+      "sources": null,
+      "not_sources": null,
+      "topic": null,
+      "published_date_precision": null
+    }
+  }

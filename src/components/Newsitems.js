@@ -20,7 +20,6 @@ const Newsitems = (props) => {
   };
 
   let { title, description, imageUrl, url, author, time, source } = props;
-  // var cardStyle={};
 
   return (
     <>
